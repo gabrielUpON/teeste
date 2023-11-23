@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import authAccess from './service/auth.service';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -11,8 +12,8 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Vite + React</h1>
         <p>
-          <button onClick={() => setCount(count => count + 1)}>
-            count is {count}
+          <button onClick={() => authAccess.signInGoogle()}>
+            Entrar com o Google
           </button>
         </p>
         <p>
